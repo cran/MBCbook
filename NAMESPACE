@@ -1,4 +1,5 @@
-import("MASS", "Rmixmod", "mclust", "mvtnorm")
+import("mclust", except = "dmvnorm")
+import("MASS", "Rmixmod", "mvtnorm")
 export(constrEM,denoisePatches,imageToPatch,imshow,reconstructImage,rqda,varSelEM)
 importFrom("grDevices", "dev.copy2pdf", "gray", "palette", "rgb")
 importFrom("graphics", "contour", "image", "par", "points")

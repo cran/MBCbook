@@ -63,5 +63,5 @@ b = 430
 C = c(1:(b-1),a,b:(nrow(X)-1))
 
 # Clustering with constrEM
-res = constrEM(X,K=3,C)
+res = constrEM(X,K=3,C,maxit=20)
 }
