@@ -9,10 +9,12 @@ rqda <- function(X,lbl,Y,maxit=50,disp=FALSE,...){
   nu = rep(n/2,2)
   gamma = rep(0.5,2)
   ll = c()
+  oldpar <- par(no.readonly = TRUE)
+  on.exit(par(oldpar)) 
   
   # Learning
   for (i in 1:maxit){
-    cat('.')
+    #cat('.')
     #browser()
     # E step
     Ti[,1] = dmvnorm(X,m[1,],S[1,,]) * ((lbl==1)*gamma[1] + (lbl==2)*(1-gamma[1]))

@@ -5,7 +5,7 @@
 \title{
 \packageTitle{MBCbook}
 }
-\description{
+\description{ 
 \packageDescription{MBCbook}
 }
 \details{
@@ -20,6 +20,8 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{MBCbook}
 }
 \references{
-Charles Bouveyron and Gilles Celeux and T. Brendan Murphy and Adrian E. Raftery, Model-Based Clustering and Classification for Data Science: with Applications in R, Cambridge University Press, 2019.
+Charles Bouveyron and Gilles Celeux and T. Brendan Murphy and Adrian E. Raftery,
+Model-Based Clustering and Classification for Data Science: with Applications 
+in R, Cambridge University Press, 2019.
 }
 \keyword{ package }

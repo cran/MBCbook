@@ -34,7 +34,7 @@ function(X,K,C,maxit=30){
   
   # EM loop
   for (it in 1:maxit){
-    cat('.')
+    #cat('.')
     # E step
     for (l in 1:L){
       for (k in 1:K){
@@ -55,7 +55,7 @@ function(X,K,C,maxit=30){
       S[k,,] = Sk / sum(T[,k]*Cn)
     }
   }
-  cat('\n')
+  #cat('\n')
   
   # Results
   cls = rep(NA,n)

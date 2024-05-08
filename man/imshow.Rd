@@ -24,6 +24,7 @@ logical; if TRUE a bitmap raster is used to plot the image instead of polygons. 
   \item{...}{
 additionial arguments to provide to subfunctions.}
 }
+\value{This function returns nothing.}
 \seealso{
 \code{\link{image}}
 }

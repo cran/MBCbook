@@ -9,8 +9,12 @@ varSelEM <- function(X,G,maxit=100,eps=1e-6){
   rho = rep(0.5,p); alpha = rep(1/G,G)
   
   cond = TRUE; i = 1; ll = c(-Inf)
+  oldpar <- par(no.readonly = TRUE) 
+  on.exit(par(oldpar))
   par(mfrow=c(1,5))
-  while(cond){ cat('.'); i = i+1
+  while(cond){ 
+    #cat('.')
+    i = i+1
     # E step
     for (g in 1:G){
       for (j in 1:p){
@@ -57,7 +61,7 @@ varSelEM <- function(X,G,maxit=100,eps=1e-6){
     # Break condition
     cond = ((ll[i-1] - ll[i] < 0) & abs((ll[i-1] - ll[i]) / ll[i]) > eps) & (i < maxit)
   }
-  cat('\n')
+  #cat('\n')
   plot(ll,type='b')
   list(mu=mu,sigma=sigma,lambda=lambda,alpha=alpha,rho=rho,P=w,cls=max.col(w),ll=ll)
 }
